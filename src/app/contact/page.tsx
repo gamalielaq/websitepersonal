@@ -13,7 +13,7 @@ export default function ContactPage() {
                             Contacto
                         </h1>
                         <p className="mt-6 max-w-2xl text-base leading-8 text-text/72 sm:text-lg">
-                            Si necesitas desarrollar una aplicación web o colaborar en un proyecto tecnológico, puedes contactarme.
+                            Si necesitas desarrollar una aplicaciÃ³n web o colaborar en un proyecto tecnolÃ³gico, puedes contactarme.
                         </p>
 
                         <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
