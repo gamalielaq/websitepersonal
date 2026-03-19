@@ -1,4 +1,4 @@
-ï»¿import Container from "@/components/layout/Container";
+import Container from "@/components/layout/Container";
 import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -13,13 +13,13 @@ export default function ContactPage() {
                             Contacto
                         </h1>
                         <p className="mt-6 max-w-2xl text-base leading-8 text-text/72 sm:text-lg">
-                            Si necesitas desarrollar una aplicaciÃ³n web o colaborar en un proyecto tecnolÃ³gico, puedes contactarme.
+                            Si necesitas desarrollar una aplicación web o colaborar en un proyecto tecnológico, puedes contactarme.
                         </p>
 
                         <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:w-auto sm:flex-row">
                             <Button
                                 href="mailto:hello@example.com"
-                                variant="primary"
+                                variant="default"
                                 className="w-full sm:w-auto"
                             >
                                 Email
@@ -28,7 +28,7 @@ export default function ContactPage() {
                                 href="https://www.linkedin.com"
                                 target="_blank"
                                 rel="noreferrer"
-                                variant="primary"
+                                variant="default"
                                 className="w-full sm:w-auto"
                             >
                                 LinkedIn
@@ -40,4 +40,5 @@ export default function ContactPage() {
         </section>
     );
 }
+
 
