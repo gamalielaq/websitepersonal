@@ -234,7 +234,7 @@ export default function AngularArchitecturePracticeSection() {
                     </div>
 
                     <p className="mx-auto mt-8 max-w-3xl text-center text-base leading-8 text-text/68 sm:text-lg">
-                        Esta estructura permite separar responsabilidades, mantener el cÃ³digo organizado y escalar la aplicaciÃ³n sin crear complejidad innecesaria.
+                        Esta estructura permite separar responsabilidades, mantener el código organizado y escalar la aplicación sin crear complejidad innecesaria.
                     </p>
                 </ScrollReveal>
             </Container>
