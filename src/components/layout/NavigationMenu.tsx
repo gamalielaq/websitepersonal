@@ -29,7 +29,7 @@ export default function NavigationMenu() {
     }, []);
 
     return (
-        <header className="fixed left-0 right-0 top-0 z-[9999] h-20 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+        <header className="fixed left-0 right-0 top-0 z-[9999] h-20 backdrop-blur supports-[backdrop-filter]">
             <Container>
                 <div className="flex h-20 w-full items-center justify-between gap-4">
                     <Link

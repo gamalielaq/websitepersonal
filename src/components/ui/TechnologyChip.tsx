@@ -46,7 +46,7 @@ export default function TechnologyChip({ technology }: TechnologyChipProps) {
     const Icon = style.icon;
 
     return (
-        <span className="inline-flex items-center gap-2 rounded-full border border-border/75 bg-background/60 px-3 py-1.5 text-[0.74rem] font-medium tracking-[0.02em] text-text/82">
+        <span className="inline-flex items-center gap-2 rounded-full border border-border/75 px-3 py-1.5 text-[0.74rem] font-medium tracking-[0.02em] text-text/82">
             <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full ${style.badgeClassName}`}>
                 <Icon className={`h-3 w-3 ${style.iconColor}`} />
             </span>

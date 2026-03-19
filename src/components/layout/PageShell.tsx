@@ -20,7 +20,7 @@ export default function PageShell({
             <Container>
                 <ScrollReveal>
                     <div className="rounded-[2rem] border border-border bg-surface p-8 shadow-2xl shadow-black/30 backdrop-blur sm:p-12">
-                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-accent">{eyebrow}</p>
+                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-text">{eyebrow}</p>
                         <h1 className="mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-text sm:text-5xl lg:text-6xl">
                             {title}
                         </h1>
@@ -33,3 +33,4 @@ export default function PageShell({
         </section>
     );
 }
+

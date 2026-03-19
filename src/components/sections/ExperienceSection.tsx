@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Container from "@/components/layout/Container";
 import FloatingTechIcons from "@/components/layout/FloatingTechIcons";
@@ -72,14 +72,14 @@ export default function ExperienceSection() {
 
                     <div className="mt-10 grid gap-10 lg:grid-cols-[160px_1fr] lg:gap-12">
                         <div className="hidden lg:flex lg:justify-center">
-                            <div className="relative h-full w-px bg-border/70">
-                                <span className="absolute left-1/2 top-2 h-4 w-4 -translate-x-1/2 rounded-full border border-accent/35 bg-accent shadow-[0_0_0_8px_rgba(34,197,94,0.06)]" />
+                            <div className="relative h-full w-px bg-border/90">
+                                <span className="absolute left-1/2 top-2 h-4 w-4 -translate-x-1/2 rounded-full border border-accent/90  shadow-[0_0_0_8px_rgba(34,197,94,0.06)]" />
                             </div>
                         </div>
 
                         <div className="relative">
-                            <div className="absolute left-0 top-2 h-px w-12 bg-border/70 lg:hidden" />
-                            <div className="absolute left-10 top-0 h-4 w-4 rounded-full border border-accent/35 bg-accent shadow-[0_0_0_8px_rgba(34,197,94,0.06)] lg:hidden" />
+                            <div className="absolute left-0 top-2 h-px w-12 bg-border/80 lg:hidden" />
+                            <div className="absolute left-10 top-0 h-4 w-4 rounded-full border border-accent/50  shadow-[0_0_0_8px_rgba(34,197,94,0.06)] lg:hidden" />
 
                             <div className="grid gap-5">
                                 {experiences.map((item) => (
@@ -88,7 +88,7 @@ export default function ExperienceSection() {
                                         className="rounded-[1.5rem] border border-border/80 bg-surface/45 p-5 sm:p-6"
                                     >
                                         <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
-                                            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-accent/90">
+                                            <p className="text-sm font-semibold uppercase tracking-[0.28em] text-text/90">
                                                 {item.role}
                                             </p>
                                             <span className="h-1 w-1 rounded-full bg-border/70" />

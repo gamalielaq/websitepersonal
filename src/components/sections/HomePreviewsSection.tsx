@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { ArrowUpRight, BookOpen, Cpu, Lightbulb } from "lucide-react";
@@ -50,10 +50,10 @@ export default function HomePreviewsSection() {
                                     className="group flex h-full flex-col rounded-[1.75rem] border border-border/80 bg-surface/45 p-7 transition hover:-translate-y-1 hover:border-accent/30 hover:bg-surface/65 hover:shadow-xl hover:shadow-black/15"
                                 >
                                     <div className="flex items-center justify-between">
-                                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
+                                        <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-text">
                                             <Icon className="h-5 w-5" />
                                         </span>
-                                        <ArrowUpRight className="h-5 w-5 text-text/45 transition group-hover:text-accent" />
+                                        <ArrowUpRight className="h-5 w-5 text-text/45 transition group-hover:text-text" />
                                     </div>
 
                                     <div className="mt-10">
@@ -69,3 +69,4 @@ export default function HomePreviewsSection() {
         </section>
     );
 }
+

@@ -1,5 +1,5 @@
 ﻿import Container from "@/components/layout/Container";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function ContactPage() {
@@ -8,7 +8,7 @@ export default function ContactPage() {
             <Container>
                 <ScrollReveal>
                     <div className="mx-auto flex max-w-3xl flex-col items-center rounded-[2rem] border border-border bg-surface p-8 text-center shadow-2xl shadow-black/30 sm:p-12">
-                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-accent">Contacto</p>
+                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-text">Contacto</p>
                         <h1 className="mt-5 text-4xl font-semibold tracking-tight text-text sm:text-5xl lg:text-6xl">
                             Contacto
                         </h1>
@@ -40,3 +40,4 @@ export default function ContactPage() {
         </section>
     );
 }
+

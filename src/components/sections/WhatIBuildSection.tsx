@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { ArrowUpRight } from "lucide-react";
 import Container from "@/components/layout/Container";
@@ -28,9 +28,9 @@ export default function WhatIBuildSection() {
                 <ScrollReveal>
                     <div className="rounded-[2rem] border border-border bg-surface p-8 shadow-2xl shadow-black/30 sm:p-12">
                         <div className="max-w-3xl">
-                            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-accent">IngenierÃ­a</p>
+                            <p className="text-sm font-semibold uppercase tracking-[0.35em] text-text">IngenierÃƒÂ­a</p>
                             <h1 className="mt-5 text-4xl font-semibold tracking-[-0.04em] text-text sm:text-5xl lg:text-6xl">
-                                QuÃ© construyo
+                                QuÃƒÂ© construyo
                             </h1>
                         </div>
 
@@ -44,7 +44,7 @@ export default function WhatIBuildSection() {
                                         <h2 className="max-w-[14ch] text-3xl font-semibold tracking-[-0.03em] text-text sm:text-[2rem]">
                                             {block.title}
                                         </h2>
-                                        <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-accent/75 transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-accent" />
+                                        <ArrowUpRight className="mt-1 h-5 w-5 shrink-0 text-text/75 transition duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-text" />
                                     </div>
 
                                     <p className="mt-10 max-w-xs text-sm leading-7 text-text/72 sm:text-base">
@@ -59,3 +59,4 @@ export default function WhatIBuildSection() {
         </section>
     );
 }
+

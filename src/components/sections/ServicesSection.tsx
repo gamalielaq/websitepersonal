@@ -65,8 +65,8 @@ export default function ServicesSection() {
                                     </div>
 
                                     <div className="mt-4 flex w-full justify-end">
-                                        <div className="inline-flex w-fit items-center rounded-full border border-accent/25 bg-accent/5 px-3 py-1 text-[0.58rem] font-semibold uppercase tracking-[0.24em] text-accent/80 transition duration-300 group-hover:border-accent/45 group-hover:text-accent">
-                                            Solicitar servicio
+                                        <div className="inline-flex w-fit items-center rounded-full border border-accent/25 bg-accent/5 px-4 py-2.5 text-[0.58rem] leading-[0] font-semibold uppercase tracking-[0.20em] text-text/80 transition duration-300 group-hover:border-accent/45 group-hover:text-text">
+                                            <span className="block leading-[0]">Solicitar servicio</span>
                                         </div>
                                     </div>
                                 </Link>
@@ -84,3 +84,5 @@ export default function ServicesSection() {
         </section>
     );
 }
+
+

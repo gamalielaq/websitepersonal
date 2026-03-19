@@ -25,7 +25,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
             <Container>
                 <ScrollReveal>
                     <div className="mx-auto max-w-4xl">
-                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-accent/78">
+                        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-text/78">
                             Servicios
                         </p>
                         <h1 className="mt-3 text-[2.1rem] font-semibold tracking-[-0.05em] text-text sm:text-[2.6rem] lg:text-[3.2rem] lg:leading-[1.02]">

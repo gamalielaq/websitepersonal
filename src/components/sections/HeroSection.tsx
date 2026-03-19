@@ -1,11 +1,11 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Blocks, Box, Database, ServerCog } from "lucide-react";
 import Container from "@/components/layout/Container";
 import FloatingTechIcons from "@/components/layout/FloatingTechIcons";
-import Button from "@/components/ui/Button";
+import { Button } from "@/components/ui/Button";
 
 const fadeUp = {
     hidden: { opacity: 0, y: 20 },
@@ -56,8 +56,8 @@ const stackItems = [
 
 export default function HeroSection() {
     return (
-        <section id="inicio" className="relative overflow-hidden bg-background">
-            <div className="absolute inset-0 -z-10 bg-background" />
+        <section id="inicio" className="relative overflow-hidden">
+            <div className="absolute inset-0 -z-10" />
             <div className="absolute right-[8%] top-24 -z-10 h-[420px] w-[420px] rounded-full bg-[radial-gradient(circle,rgba(59,130,246,0.11)_0%,rgba(59,130,246,0.05)_34%,transparent_72%)] blur-3xl" />
 
             <FloatingTechIcons className="opacity-60" />
@@ -124,11 +124,11 @@ export default function HeroSection() {
                             variants={fadeUp}
                             className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
                         >
-                            <Button href="/#services" variant="primary">
+                            <Button href="/#services" variant="outline">
                                 Ver servicios
                             </Button>
-                            <Button href="/contact" variant="outline">
-                                Contátame
+                            <Button href="/contact" variant="default">
+                                Contáctame
                             </Button>
                         </motion.div>
                     </motion.div>

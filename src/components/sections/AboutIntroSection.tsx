@@ -36,7 +36,7 @@ export default function AboutIntroSection() {
 
                     <div className="order-2 space-y-6 text-left">
                         <div className="space-y-2">
-                            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-accent">Sobre mí</p>
+                            <p className="text-xs font-semibold uppercase tracking-[0.4em] text-text">Sobre mí</p>
                             <h1 className="text-3xl font-semibold tracking-tight text-text sm:text-4xl">
                                 Gamaliel
                             </h1>
@@ -75,7 +75,7 @@ export default function AboutIntroSection() {
                         <div>
                             <a
                                 href="#contacto"
-                                className="inline-flex items-center justify-center rounded-full border border-accent px-6 py-3 text-sm font-semibold text-accent transition duration-300 hover:bg-accent hover:text-black"
+                                className="inline-flex items-center justify-center rounded-full border border-accent px-6 py-3 text-sm font-semibold text-text transition duration-300 hover:bg-accent hover:text-black"
                             >
                                 Contáctame
                             </a>
@@ -86,6 +86,7 @@ export default function AboutIntroSection() {
         </section>
     );
 }
+
 
 
 

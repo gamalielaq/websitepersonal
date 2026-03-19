@@ -52,8 +52,8 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="es" className={cn("font-sans", geist.variable)}>
-            <body className="bg-background text-text antialiased">
-                <div className="relative min-h-screen overflow-x-hidden bg-background">
+            <body className="text-text antialiased">
+                <div className="relative min-h-screen overflow-x-hidden">
                     <NavigationMenu />
                     <div className="flex min-h-screen flex-col pt-24">
                         <PageTransition>{children}</PageTransition>

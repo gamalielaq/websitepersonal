@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { AnimatePresence, motion } from "framer-motion";
 import { useMemo, useState, type ReactNode } from "react";
@@ -50,14 +50,14 @@ const architectureTree: ExplorerNode = {
     name: "src",
     type: "folder",
     icon: FolderOpen,
-    iconColor: "text-accent",
+    iconColor: "text-text",
     children: [
         {
             id: "src/app",
             name: "app",
             type: "folder",
             icon: LayoutGrid,
-            iconColor: "text-accent",
+            iconColor: "text-text",
             children: [
                 {
                     id: "src/app/core",
@@ -93,7 +93,7 @@ const architectureTree: ExplorerNode = {
                     icon: FolderSearch,
                     iconColor: "text-green-300",
                     children: [
-                        { id: "src/app/features/auth", name: "auth", type: "folder", icon: Lock, iconColor: "text-green-200", children: [{ id: "src/app/features/auth/pages", name: "pages", type: "folder", icon: FolderOpen, iconColor: "text-green-200", children: [{ id: "src/app/features/auth/pages/login", name: "login", type: "folder", icon: FolderOpen, iconColor: "text-green-200", children: [fileNode("src/app/features/auth/pages/login/login.component.ts", "login.component.ts", "ts", `import { ChangeDetectionStrategy, Component, inject } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n    selector: 'app-login',\n    templateUrl: './login.component.html',\n    styleUrl: './login.component.scss',\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class LoginComponent {\n    private readonly fb = inject(FormBuilder);\n    private readonly authService = inject(AuthService);\n\n    readonly form = this.fb.nonNullable.group({\n        email: ['', [Validators.required, Validators.email]],\n        password: ['', [Validators.required]],\n    });\n\n    submit(): void {\n        if (this.form.invalid) return;\n        this.authService.login(this.form.getRawValue()).subscribe();\n    }\n}`), fileNode("src/app/features/auth/pages/login/login.component.html", "login.component.html", "html", `<section class="login-page">\n    <form [formGroup]="form" (ngSubmit)="submit()">\n        <input type="email" formControlName="email" placeholder="Correo" />\n        <input type="password" formControlName="password" placeholder="Contraseña" />\n        <app-button>Ingresar</app-button>\n    </form>\n</section>`), fileNode("src/app/features/auth/pages/login/login.component.scss", "login.component.scss", "scss", `.login-page {\n    display: grid;\n    place-items: center;\n    min-height: 100dvh;\n}\n\nform {\n    display: grid;\n    gap: 1rem;\n    width: min(100%, 24rem);\n}`)] }] }, { id: "src/app/features/auth/services", name: "services", type: "folder", icon: Wrench, iconColor: "text-green-200", children: [fileNode("src/app/features/auth/services/auth.service.ts", "auth.service.ts", "ts", `import { inject, Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { ApiService } from '../../../core/services/api.service';\n\n@Injectable({ providedIn: 'root' })\nexport class AuthService {\n    private readonly api = inject(ApiService);\n\n    login(payload: { email: string; password: string }): Observable<void> {\n        return this.api.get<void>('/auth/login');\n    }\n\n    isAuthenticated(): boolean {\n        return Boolean(localStorage.getItem('token'));\n    }\n\n    getToken(): string | null {\n        return localStorage.getItem('token');\n    }\n}`)] }, fileNode("src/app/features/auth/auth.routes.ts", "auth.routes.ts", "ts", `import { Routes } from '@angular/router';\nimport { LoginComponent } from './pages/login/login.component';\n\nexport const AUTH_ROUTES: Routes = [\n    { path: 'login', component: LoginComponent },\n];`), fileNode("src/app/features/auth/auth.module.ts", "auth.module.ts", "ts", `import { NgModule } from '@angular/core';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { SharedModule } from '../../shared/shared.module';\nimport { LoginComponent } from './pages/login/login.component';\n\n@NgModule({\n    imports: [ReactiveFormsModule, SharedModule],\n    declarations: [LoginComponent],\n})\nexport class AuthModule {}`)] },
+                        { id: "src/app/features/auth", name: "auth", type: "folder", icon: Lock, iconColor: "text-green-200", children: [{ id: "src/app/features/auth/pages", name: "pages", type: "folder", icon: FolderOpen, iconColor: "text-green-200", children: [{ id: "src/app/features/auth/pages/login", name: "login", type: "folder", icon: FolderOpen, iconColor: "text-green-200", children: [fileNode("src/app/features/auth/pages/login/login.component.ts", "login.component.ts", "ts", `import { ChangeDetectionStrategy, Component, inject } from '@angular/core';\nimport { FormBuilder, Validators } from '@angular/forms';\nimport { AuthService } from '../../services/auth.service';\n\n@Component({\n    selector: 'app-login',\n    templateUrl: './login.component.html',\n    styleUrl: './login.component.scss',\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class LoginComponent {\n    private readonly fb = inject(FormBuilder);\n    private readonly authService = inject(AuthService);\n\n    readonly form = this.fb.nonNullable.group({\n        email: ['', [Validators.required, Validators.email]],\n        password: ['', [Validators.required]],\n    });\n\n    submit(): void {\n        if (this.form.invalid) return;\n        this.authService.login(this.form.getRawValue()).subscribe();\n    }\n}`), fileNode("src/app/features/auth/pages/login/login.component.html", "login.component.html", "html", `<section class="login-page">\n    <form [formGroup]="form" (ngSubmit)="submit()">\n        <input type="email" formControlName="email" placeholder="Correo" />\n        <input type="password" formControlName="password" placeholder="ContraseÃ±a" />\n        <app-button>Ingresar</app-button>\n    </form>\n</section>`), fileNode("src/app/features/auth/pages/login/login.component.scss", "login.component.scss", "scss", `.login-page {\n    display: grid;\n    place-items: center;\n    min-height: 100dvh;\n}\n\nform {\n    display: grid;\n    gap: 1rem;\n    width: min(100%, 24rem);\n}`)] }] }, { id: "src/app/features/auth/services", name: "services", type: "folder", icon: Wrench, iconColor: "text-green-200", children: [fileNode("src/app/features/auth/services/auth.service.ts", "auth.service.ts", "ts", `import { inject, Injectable } from '@angular/core';\nimport { Observable } from 'rxjs';\nimport { ApiService } from '../../../core/services/api.service';\n\n@Injectable({ providedIn: 'root' })\nexport class AuthService {\n    private readonly api = inject(ApiService);\n\n    login(payload: { email: string; password: string }): Observable<void> {\n        return this.api.get<void>('/auth/login');\n    }\n\n    isAuthenticated(): boolean {\n        return Boolean(localStorage.getItem('token'));\n    }\n\n    getToken(): string | null {\n        return localStorage.getItem('token');\n    }\n}`)] }, fileNode("src/app/features/auth/auth.routes.ts", "auth.routes.ts", "ts", `import { Routes } from '@angular/router';\nimport { LoginComponent } from './pages/login/login.component';\n\nexport const AUTH_ROUTES: Routes = [\n    { path: 'login', component: LoginComponent },\n];`), fileNode("src/app/features/auth/auth.module.ts", "auth.module.ts", "ts", `import { NgModule } from '@angular/core';\nimport { ReactiveFormsModule } from '@angular/forms';\nimport { SharedModule } from '../../shared/shared.module';\nimport { LoginComponent } from './pages/login/login.component';\n\n@NgModule({\n    imports: [ReactiveFormsModule, SharedModule],\n    declarations: [LoginComponent],\n})\nexport class AuthModule {}`)] },
                         { id: "src/app/features/dashboard", name: "dashboard", type: "folder", icon: Users, iconColor: "text-green-200", children: [{ id: "src/app/features/dashboard/pages", name: "pages", type: "folder", icon: FolderOpen, iconColor: "text-green-200", children: [fileNode("src/app/features/dashboard/pages/dashboard.component.ts", "dashboard.component.ts", "ts", `import { ChangeDetectionStrategy, Component } from '@angular/core';\n\n@Component({\n    selector: 'app-dashboard',\n    template: '<p>Dashboard works</p>',\n    changeDetection: ChangeDetectionStrategy.OnPush,\n})\nexport class DashboardComponent {}`)] }, fileNode("src/app/features/dashboard/dashboard.routes.ts", "dashboard.routes.ts", "ts", `import { Routes } from '@angular/router';\nimport { DashboardComponent } from './pages/dashboard.component';\n\nexport const DASHBOARD_ROUTES: Routes = [\n    { path: '', component: DashboardComponent },\n];`)] },
                     ],
                 },
@@ -203,7 +203,7 @@ export default function AngularArchitecturePracticeSection() {
                     <SectionHeading
                         eyebrow="Arquitectura Frontend"
                         title="Explore una Arquitectura Angular escalable."
-                        description="Mapa de estructura pensado para crecer con orden: carpetas con responsabilidades claras, features aisladas y código fácil de seguir."
+                        description="Mapa de estructura pensado para crecer con orden: carpetas con responsabilidades claras, features aisladas y cÃ³digo fÃ¡cil de seguir."
                         className="max-w-4xl"
                     />
 
@@ -234,11 +234,12 @@ export default function AngularArchitecturePracticeSection() {
                     </div>
 
                     <p className="mx-auto mt-8 max-w-3xl text-center text-base leading-8 text-text/68 sm:text-lg">
-                        Esta estructura permite separar responsabilidades, mantener el código organizado y escalar la aplicación sin crear complejidad innecesaria.
+                        Esta estructura permite separar responsabilidades, mantener el cÃ³digo organizado y escalar la aplicaciÃ³n sin crear complejidad innecesaria.
                     </p>
                 </ScrollReveal>
             </Container>
         </section>
     );
 }
+
 
