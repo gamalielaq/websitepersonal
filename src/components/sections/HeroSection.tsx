@@ -124,7 +124,7 @@ export default function HeroSection() {
 
                         <motion.div
                             variants={fadeUp}
-                            className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center"
+                            className="mt-10 hidden gap-3 sm:flex sm:flex-row sm:items-center"
                         >
                             <Button href="/#services" variant="outline">
                                 Ver servicios
@@ -158,6 +158,20 @@ export default function HeroSection() {
                                         className="h-auto w-full object-cover"
                                     />
                                 </div>
+                            </motion.div>
+
+                            <motion.div
+                                initial={{ opacity: 0, y: 16 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: 0.42, ease: motionEase }}
+                                className="flex w-full flex-col gap-3 sm:hidden"
+                            >
+                                <Button href="/#services" variant="outline">
+                                    Ver servicios
+                                </Button>
+                                <Button href="/contact" variant="default">
+                                    Contactame
+                                </Button>
                             </motion.div>
 
                             {/* <div className="relative z-0 flex w-full max-w-[320px] flex-col items-stretch">
@@ -207,5 +221,6 @@ export default function HeroSection() {
         </section>
     );
 }
+
 
 

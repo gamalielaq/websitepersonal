@@ -203,7 +203,7 @@ export default function AngularArchitecturePracticeSection() {
                     <SectionHeading
                         eyebrow="Arquitectura Frontend"
                         title="Explore una Arquitectura Angular escalable."
-                        description="Mapa de estructura pensado para crecer con orden: carpetas con responsabilidades claras, features aisladas y cÃ³digo fÃ¡cil de seguir."
+                        description="Mapa de estructura pensado para crecer con orden: carpetas con responsabilidades claras, features aisladas y código fácil de seguir."
                         className="max-w-4xl"
                     />
 

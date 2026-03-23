@@ -40,7 +40,7 @@ const principles = [
     {
         title: "Escalabilidad",
         description:
-            "La aplicaciï¿½n debe poder crecer sin volverse caï¿½tica. La estructura debe soportar nuevas funcionalidades sin romper lo existente.",
+            "La aplicación debe poder crecer sin volverse carítica. La estructura debe soportar nuevas funcionalidades sin romper lo existente.",
         icon: ScanSearch,
         badgeTone: "bg-emerald-500/12",
         iconColor: "text-emerald-300",
