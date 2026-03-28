@@ -110,7 +110,7 @@ export default function HomePage() {
                                 [02] EXPERIENCIA
                             </p>
                             <h2 className="text-3xl font-bold tracking-tight text-text">
-                                8+ años construyendo soluciones reales.
+                                7+ años construyendo soluciones reales.
                             </h2>
                             <p className="leading-relaxed text-text/70">
                                 No solo escribo código; diseño ecosistemas. Mi enfoque se centra en la longevidad del producto y la eficiencia del equipo de desarrollo.
@@ -221,7 +221,7 @@ export default function HomePage() {
                             <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Proyectos Exitosos</p>
                         </div>
                         <div>
-                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">8</p>
+                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">7</p>
                             <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Años de Experiencia</p>
                         </div>
                         <div>

@@ -4,7 +4,8 @@ export type ServiceIconKey = "applications" | "architecture" | "backend" | "webs
 
 export type ServiceItem = {
     slug: string;
-    title: string;
+    title?: string;
+    subTitle?: string;
     description: string;
     technologies: ServiceTechnology[];
     solutions: string[];
@@ -26,8 +27,9 @@ export const services: ServiceItem[] = [
     },
     {
         slug: "arquitectura-frontend",
-        title: "Arquitectura Frontend",
-        description: "Diseño arquitecturas frontend que permiten escalar aplicaciones sin caos técnico.",
+        // title: "Arquitectura Frontend para Empresas",
+        subTitle: 'Arquitectura Frontend para Empresas',
+        description: "Estandarice su desarrollo con sistemas de diseño y arquitecturas modulares que permiten a múltiples equipos trabajar en armonía.",
         technologies: ["Angular"],
         solutions: [
             "Estructuras modulares para proyectos Angular",
@@ -38,7 +40,8 @@ export const services: ServiceItem[] = [
     },
     {
         slug: "backend",
-        title: "Backend y APIs",
+        title: "Fullstack Development",
+        subTitle: 'NestJS & Laravel',
         description: "Construcción de APIs y microservicios para soportar aplicaciones modernas.",
         technologies: ["NestJS", "Laravel"],
         solutions: [
