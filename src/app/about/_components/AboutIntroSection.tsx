@@ -238,10 +238,12 @@ export default function AboutIntroSection() {
                             <div className="space-y-1">
                                 <label className="ml-1 text-[10px] uppercase tracking-widest text-text/60">Tipo de Proyecto</label>
                                 <select className="w-full appearance-none rounded border border-border/20 bg-surface px-4 py-3 text-text outline-none transition-all focus:border-accent focus:ring-1 focus:ring-accent/20">
-                                    <option>Desarrollo Cloud & Backend</option>
-                                    <option>Mobile App (Flutter/React Native)</option>
-                                    <option>Auditoria de Arquitectura</option>
-                                    <option>Consultoria CTO-as-a-Service</option>
+                                    <option>Desarrollo Front end Angular</option>
+                                    <option>Arquitectura Frontend </option>
+                                    <option>Desarrollo Fullstack</option>
+                                    <option>Desarrollo de aplicaciones web</option>
+                                    <option>Backend NestJS &/o Laravel</option>
+                                    <option>Desarrollo de páginas web</option>
                                 </select>
                             </div>
 
