@@ -1,6 +1,12 @@
 export type EngineeringServiceIconKey = "monitor-smartphone" | "layers" | "globe";
 
-export const engineeringServices = [
+type EngineeringServiceItem = {
+    title: string;
+    description: string;
+    iconKey: EngineeringServiceIconKey;
+};
+
+export const engineeringServices: EngineeringServiceItem[] = [
     {
         title: "Desarrollo Frontend",
         description: "Building modern interfaces using Angular, React and modern web technologies.",

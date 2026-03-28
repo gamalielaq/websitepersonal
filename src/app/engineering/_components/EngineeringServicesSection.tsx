@@ -20,12 +20,12 @@ export default function EngineeringServicesSection() {
             <Container className="relative z-10">
                 <ScrollReveal>
                     <div className="rounded-[2rem] border border-border bg-surface p-8 shadow-2xl shadow-black/30 sm:p-12">
-                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-text">IngenierÃ­a</p>
+                        <p className="text-sm font-semibold uppercase tracking-[0.35em] text-text">Ingeniería</p>
                         <h1 className="mt-5 text-4xl font-semibold tracking-tight text-text sm:text-5xl lg:text-6xl">
-                            Servicios de IngenierÃ­a
+                            Servicios de Ingeniería
                         </h1>
                         <p className="mt-6 max-w-2xl text-base leading-8 text-text/72 sm:text-lg">
-                            Servicios enfocados en construir experiencias web modernas, arquitecturas sostenibles y productos digitales bien diseÃ±ados.
+                            Servicios enfocados en construir experiencias web modernas, arquitecturas sostenibles y productos digitales bien diseñados.
                         </p>
 
                         <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
