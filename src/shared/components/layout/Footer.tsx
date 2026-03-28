@@ -31,19 +31,19 @@ export default function Footer() {
                     </div>
 
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Directory</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Directorio</p>
                         <ul className="mt-4 space-y-3 text-sm text-text/66">
-                            <li><Link href="/servicios" className="transition-colors hover:text-text">Services</Link></li>
-                            <li><Link href="/projects" className="transition-colors hover:text-text">Case_Studies</Link></li>
-                            <li><Link href="/#frontend-architecture" className="transition-colors hover:text-text">Methodology</Link></li>
+                            <li><Link href="/servicios" className="transition-colors hover:text-text">Servicios</Link></li>
+                            <li><Link href="/projects" className="transition-colors hover:text-text">Casos de estudio</Link></li>
+                            <li><Link href="/#frontend-architecture" className="transition-colors hover:text-text">Metodoloía</Link></li>
                         </ul>
                     </div>
 
                     <div>
-                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Company</p>
+                        <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Compañia</p>
                         <ul className="mt-4 space-y-3 text-sm text-text/66">
-                            <li><Link href="/about" className="transition-colors hover:text-text">About</Link></li>
-                            <li><Link href="/contact" className="transition-colors hover:text-text">Contact</Link></li>
+                            <li><Link href="/about" className="transition-colors hover:text-text">Sobre mi</Link></li>
+                            <li><Link href="/contact" className="transition-colors hover:text-text">Contacto</Link></li>
                             <li><span className="text-text/40">Careers</span></li>
                         </ul>
                     </div>
