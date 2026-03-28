@@ -1,4 +1,5 @@
 import {
+    ArrowUpRight,
     CheckCircle2,
     Code2,
     Database,
@@ -6,10 +7,33 @@ import {
     Layers3,
     Network,
     Terminal,
-    Users,
 } from "lucide-react";
 import Container from "@/shared/components/layout/Container";
 import Image from "next/image";
+import Link from "next/link";
+
+type AngularGradientIconProps = {
+    className?: string;
+};
+
+function AngularGradientIcon({ className }: AngularGradientIconProps) {
+    return (
+        <svg viewBox="0 0 24 24" aria-hidden="true" className={className}>
+            <defs>
+                <linearGradient id="angular-enterprise-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stopColor="#f637e3" />
+                    <stop offset="50%" stopColor="#8e13f0" />
+                    <stop offset="100%" stopColor="#f50d55" />
+                </linearGradient>
+            </defs>
+            <path
+                fill="url(#angular-enterprise-gradient)"
+                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z"
+            />
+        </svg>
+    );
+}
+
 
 export default function Home() {
     return (
@@ -93,21 +117,21 @@ export default function Home() {
                             </p>
                         </div>
                         <div className="grid grid-cols-1 gap-8 md:grid-cols-3 lg:col-span-2">
-                            <div className="rounded-lg bg-surface/80 p-8 transition-transform hover:-translate-y-1">
+                            <div className="rounded-lg bg-surface/68 p-8 transition-transform hover:-translate-y-1">
                                 <Terminal className="mb-6 h-7 w-7 text-accent" />
                                 <h3 className="mb-3 font-bold text-text">Especialista Angular</h3>
                                 <p className="text-sm leading-relaxed text-text/70">
                                     Dominio total de RxJS, Signals, NgRx y optimización de renderizado para apps críticas.
                                 </p>
                             </div>
-                            <div className="rounded-lg bg-surface/80 p-8 transition-transform hover:-translate-y-1">
+                            <div className="rounded-lg bg-[#1d1d1d]/86 p-8 transition-transform hover:-translate-y-1">
                                 <FolderTree className="mb-6 h-7 w-7 text-accent" />
                                 <h3 className="mb-3 font-bold text-text">Arquitectura Limpia</h3>
                                 <p className="text-sm leading-relaxed text-text/70">
                                     Diseño de sistemas modulares, desacoplados y testeables siguiendo principios SOLID.
                                 </p>
                             </div>
-                            <div className="rounded-lg bg-surface/80 p-8 transition-transform hover:-translate-y-1">
+                            <div className="rounded-lg bg-surface/88 p-8 transition-transform hover:-translate-y-1">
                                 <Layers3 className="mb-6 h-7 w-7 text-accent" />
                                 <h3 className="mb-3 font-bold text-text">Ejecución Fullstack</h3>
                                 <p className="text-sm leading-relaxed text-text/70">
@@ -125,10 +149,16 @@ export default function Home() {
                         <p className="mb-4 font-mono text-[10px] uppercase tracking-[0.3em] text-accent">
                             [03] SERVICIOS CLAVE
                         </p>
-                        <h2 className="text-4xl font-bold tracking-tighter text-text">Ingeniería a Medida</h2>
+                        <div className="flex flex-wrap items-center justify-between gap-4">
+                            <h2 className="text-4xl font-bold tracking-tighter text-text">Soluciones Estratégicas</h2>
+                            <Link href="/#services" className="inline-flex items-center gap-2 rounded-full border border-accent  px-4 py-2 text-sm font-semibold text-black shadow-[0_10px_30px_rgba(34,197,94,0.28)] transition-all hover:brightness-110 hover:shadow-[0_12px_34px_rgba(34,197,94,0.36)]">
+                                Ver todos los servicios
+                                <ArrowUpRight className="h-4 w-4" />
+                            </Link>
+                        </div>
                     </div>
                     <div className="grid grid-cols-1 gap-6 md:grid-cols-12">
-                        <div className="relative overflow-hidden rounded-lg bg-surface/80 border-l-2 border-accent p-10 md:col-span-8">
+                        <div className="relative overflow-hidden rounded-lg  bg-[#1a1a1a]/92 border-l-2 border-accent p-10 md:col-span-8">
                             <div className="relative z-10 max-w-md">
                                 <h3 className="mb-4 text-2xl font-bold text-text">Consultoría Angular Enterprise</h3>
                                 <p className="mb-8 text-text/70">
@@ -148,7 +178,7 @@ export default function Home() {
                             </div>
                             <Code2 className="absolute -bottom-10 -right-10 h-44 w-44 text-accent/10" />
                         </div>
-                        <div className="flex flex-col justify-between rounded-lg bg-surface/80 p-10 transition-colors hover:bg-surface/80 md:col-span-4">
+                        <div className="flex flex-col justify-between rounded-lg bg-[#1d1d1d]/88 p-10 transition-colors hover:bg-[#242424]/90 md:col-span-4">
                             <div>
                                 <h3 className="mb-4 text-xl font-bold text-text">Diseño de Arquitectura</h3>
                                 <p className="text-sm leading-relaxed text-text/70">
@@ -159,7 +189,7 @@ export default function Home() {
                                 <Network className="h-6 w-6 text-amber-300" />
                             </div>
                         </div>
-                        <div className="flex flex-col justify-between rounded-lg bg-surface/80 p-10 transition-colors hover:bg-surface/80 md:col-span-4">
+                        <div className="flex flex-col justify-between rounded-lg bg-[#1d1d1d]/100 p-10 transition-colors hover:bg-surface md:col-span-4">
                             <div>
                                 <h3 className="mb-4 text-xl font-bold text-text">Desarrollo Fullstack</h3>
                                 <p className="text-sm leading-relaxed text-text/70">
@@ -170,14 +200,14 @@ export default function Home() {
                                 <Database className="h-6 w-6 text-accent" />
                             </div>
                         </div>
-                        <div className="flex items-center justify-between overflow-hidden rounded-lg bg-surface/80 border-l-2 border-amber-300/80 p-10 md:col-span-8">
+                        <div className="flex items-center justify-between overflow-hidden rounded-lg bg-[#1a1a1a]/92 border-l-2 border-amber-300/80 p-10 md:col-span-8">
                             <div className="max-w-md">
-                                <h3 className="mb-4 text-2xl font-bold text-text">Mentoring &amp; Tech Lead</h3>
+                                <h3 className="mb-4 text-2xl font-bold text-text">Desarrollo Angular enterprise</h3>
                                 <p className="text-text/70">
-                                    Elevación de estándares técnicos en equipos de desarrollo a través de code reviews y formación especializada.
+                                    Desarrollo y escalado de aplicaciones Angular enterprise con arquitectura modular, performance y mantenibilidad.
                                 </p>
                             </div>
-                            <Users className="h-12 w-12 text-amber-300/40" />
+                            <AngularGradientIcon className="h-12 w-12" />
                         </div>
                     </div>
                 </Container>
@@ -280,6 +310,21 @@ export default function Home() {
         </main>
     );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
