@@ -3,9 +3,7 @@ import {
     AppWindow,
     ArrowRight,
     ArrowUpRight,
-    Blocks,
-    CheckCircle2,
-    DatabaseZap,
+    Blocks,    DatabaseZap,
     Globe2,
     type LucideIcon,
 } from "lucide-react";
@@ -47,30 +45,24 @@ export default function ServicesPage() {
     const [featured, ...rest] = services;
 
     return (
-        <main className="py-20 sm:py-24 lg:py-28">
+        <main className="">
             <Container>
-                <section className="relative overflow-hidden rounded-[2rem] border border-border/70 bg-surface/65 p-8 sm:p-12 lg:p-14">
-                    <div className="pointer-events-none absolute -right-20 -top-20 h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
-                    <div className="pointer-events-none absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-white/[0.03] blur-3xl" />
-                    <div className="relative z-10 grid gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:items-end">
-                        <div>
-                            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.34em] text-accent">Servicios</p>
-                            <h1 className="mt-4 text-[2.1rem] font-semibold tracking-[-0.05em] text-text sm:text-[2.8rem] lg:text-[3.5rem] lg:leading-[0.98]">
-                                Soluciones estrategicas para escalar productos digitales
+                <section className="relative mb-16 px-8 py-14 sm:px-12 lg:px-14 lg:py-20">
+                    <div className="pointer-events-none absolute inset-0" />
+                    <header className="relative z-10 flex flex-col justify-between gap-12 md:flex-row md:items-end">
+                        <div className="max-w-3xl mr-10">
+                            <p className="mb-6 text-sm font-semibold uppercase tracking-[0.3em] text-accent">High-Performance Engineering</p>
+                            <h1 className="mb-8 text-5xl font-bold leading-none tracking-tight text-text sm:text-6xl md:text-7xl lg:text-8xl">
+                                SOLUCIONES <br />
+                                <span className="text-accent">ARCHITECTURAL.</span>
                             </h1>
-                            <p className="mt-6 max-w-2xl text-base leading-8 text-text/70 sm:text-lg">
-                                Combinamos arquitectura frontend, desarrollo fullstack y enfoque de negocio para construir software mantenible, rapido y listo para crecer.
+                        </div>
+                        <div className="max-w-sm md:mb-4">
+                            <p className="border-l-2 border-border/35 pl-6 text-lg leading-relaxed text-text/70">
+                                Arquitectura de software de elite disenada para escalar operaciones, optimizar procesos criticos y dominar el mercado digital.
                             </p>
                         </div>
-                        <div className="rounded-2xl border border-border/60 bg-background/35 p-6">
-                            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-text/70">Enfoque</p>
-                            <ul className="mt-4 grid gap-3 text-sm text-text/78">
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Arquitectura clara y escalable</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Entregas con valor de negocio</li>
-                                <li className="flex items-center gap-2"><CheckCircle2 className="h-4 w-4 text-accent" /> Calidad tecnica sostenible</li>
-                            </ul>
-                        </div>
-                    </div>
+                    </header>
                 </section>
 
                 <section className="mt-16">
@@ -125,7 +117,7 @@ export default function ServicesPage() {
                             return (
                                 <article
                                     key={service.slug}
-                                    className="flex h-full flex-col justify-between rounded-md bg-[#1d1d1d]/88 p-8 md:col-span-4"
+                                    className="flex h-full flex-col justify-between rounded-xl border border-border/65 bg-surface/72 p-8 ring-1 ring-border/25 md:col-span-4"
                                 >
                                     <div>
                                         <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-accent/10 text-accent">
@@ -161,13 +153,13 @@ export default function ServicesPage() {
 
                 <section className="mt-20">
                     <div className="mb-8 flex items-center gap-4">
-                        <div className="h-px w-12 bg-accent/90" />
+                        <div className="h-px w-12 bg-accent/60" />
                         <h2 className="text-2xl font-semibold tracking-[-0.03em] text-text sm:text-3xl">Metodo de trabajo</h2>
                     </div>
                     <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
                         {processSteps.map((item) => (
-                            <article key={item.step} className="border-border/60 bg-[rgb(28_27_27/var(--tw-bg-opacity,1))] p-6">
-                                <p className="font-mono text-3xl font-semibold text-accent/70">{item.step}</p>
+                            <article key={item.step} className="rounded-2xl border border-border/60 bg-surface/62 p-6">
+                                <p className="font-mono text-3xl font-semibold text-accent/45">{item.step}</p>
                                 <h3 className="mt-4 text-lg font-semibold text-text">{item.title}</h3>
                                 <p className="mt-3 text-sm leading-7 text-text/70">{item.description}</p>
                             </article>
@@ -204,3 +196,5 @@ export default function ServicesPage() {
         </main>
     );
 }
+
+
