@@ -1,14 +1,14 @@
-import SectionDivider from "@/components/layout/SectionDivider";
-import AngularArchitecturePracticeSection from "@/components/sections/AngularArchitecturePracticeSection";
-import ClosingQuoteSection from "@/components/sections/ClosingQuoteSection";
-import ExperienceSection from "@/components/sections/ExperienceSection";
-import FrontendArchitectureSection from "@/components/sections/FrontendArchitectureSection";
-import HeroSection from "@/components/sections/HeroSection";
-import HomePreviewsSection from "@/components/sections/HomePreviewsSection";
-import ServicesSection from "@/components/sections/ServicesSection";
-import TechnicalSkillsSection from "@/components/sections/TechnicalSkillsSection";
-import TechSolarSystemSection from "@/components/sections/TechSolarSystemSection";
-import TechnologiesSection from "@/components/sections/TechnologiesSection";
+import SectionDivider from "@/shared/components/layout/SectionDivider";
+import AngularArchitecturePracticeSection from "@/features/home/components/AngularArchitecturePracticeSection";
+import ClosingQuoteSection from "@/features/home/components/ClosingQuoteSection";
+import ExperienceSection from "@/features/home/components/ExperienceSection";
+import FrontendArchitectureSection from "@/features/home/components/FrontendArchitectureSection";
+import HeroSection from "@/features/home/components/HeroSection";
+import HomePreviewsSection from "@/features/home/components/HomePreviewsSection";
+import ServicesSection from "@/features/home/components/ServicesSection";
+import TechnicalSkillsSection from "@/features/home/components/TechnicalSkillsSection";
+import TechSolarSystemSection from "@/features/home/components/TechSolarSystemSection";
+import TechnologiesSection from "@/features/home/components/TechnologiesSection";
 
 export default function Home() {
     return (
@@ -35,5 +35,7 @@ export default function Home() {
         </>
     );
 }
+
+
 
 

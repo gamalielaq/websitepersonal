@@ -1,8 +1,8 @@
-﻿import { notFound } from "next/navigation";
-import Container from "@/components/layout/Container";
-import { services } from "@/data/services";
-import ScrollReveal from "@/components/ui/ScrollReveal";
-import TechnologyChip from "@/components/ui/TechnologyChip";
+import { notFound } from "next/navigation";
+import Container from "@/shared/components/layout/Container";
+import { services } from "@/content/services";
+import ScrollReveal from "@/shared/components/ui/ScrollReveal";
+import TechnologyChip from "@/features/services/components/TechnologyChip";
 
 type ServicePageProps = {
     params: Promise<{ slug: string }>;
@@ -73,3 +73,5 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
         </section>
     );
 }
+
+

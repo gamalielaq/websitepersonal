@@ -1,7 +1,8 @@
-﻿"use client";
+"use client";
 
-import PortfolioSection from "@/components/sections/PortfolioSection";
+import PortfolioSection from "@/features/projects/components/PortfolioSection";
 
 export default function ProjectsPage() {
     return <PortfolioSection />;
 }
+

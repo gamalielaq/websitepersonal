@@ -1,4 +1,4 @@
-import PageShell from "@/components/layout/PageShell";
+import PageShell from "@/shared/components/layout/PageShell";
 
 const cardClassName = "rounded-[1.5rem] border border-border bg-background/50 p-6";
 const titleClassName = "text-xl font-semibold text-text";
@@ -26,3 +26,4 @@ export default function IdeasPage() {
         </PageShell>
     );
 }
+

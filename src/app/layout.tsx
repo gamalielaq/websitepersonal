@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import Footer from "@/components/layout/Footer";
-import NavigationMenu from "@/components/layout/NavigationMenu";
-import PageTransition from "@/components/layout/PageTransition";
+import Footer from "@/shared/components/layout/Footer";
+import NavigationMenu from "@/shared/components/layout/NavigationMenu";
+import PageTransition from "@/shared/components/layout/PageTransition";
 import "./globals.css";
 import { Geist } from "next/font/google";
-import { cn } from "@/lib/utils";
+import { cn } from "@/shared/utils/cn";
+import { siteConfig } from "@/content/site";
 
 const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
@@ -12,37 +13,11 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 
 export const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title: "Gamaliel Abanto | Ingeniero de Software",
-    description:
-        "Ingeniero de software especializado en desarrollo de aplicaciones web modernas, arquitectura frontend y tecnologias JavaScript.",
-    keywords: [
-        "ingeniero de software",
-        "desarrollador frontend",
-        "angular developer",
-        "web developer",
-    ],
-    openGraph: {
-        title: "Gamaliel Abanto | Ingeniero de Software",
-        description:
-            "Construyo aplicaciones web modernas usando tecnologias como Angular, Next.js y TypeScript.",
-        type: "website",
-        url: "/",
-        images: [
-            {
-                url: "/opengraph-image",
-                width: 1200,
-                height: 630,
-                alt: "Preview del portfolio de Gamaliel Abanto",
-            },
-        ],
-    },
-    twitter: {
-        card: "summary_large_image",
-        title: "Gamaliel Abanto | Ingeniero de Software",
-        description:
-            "Construyo aplicaciones web modernas usando tecnologias como Angular, Next.js y TypeScript.",
-        images: ["/opengraph-image"],
-    },
+    title: siteConfig.title,
+    description: siteConfig.description,
+    keywords: siteConfig.keywords,
+    openGraph: siteConfig.openGraph,
+    twitter: siteConfig.twitter,
 };
 
 export default function RootLayout({

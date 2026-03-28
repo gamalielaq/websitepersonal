@@ -1,5 +1,6 @@
-﻿import AboutIntroSection from "@/components/sections/AboutIntroSection";
+import AboutIntroSection from "./_components/AboutIntroSection";
 
 export default function AboutPage() {
     return <AboutIntroSection />;
 }
+

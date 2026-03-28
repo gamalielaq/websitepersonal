@@ -1,6 +1,6 @@
-import Container from "@/components/layout/Container";
-import { Button } from "@/components/ui/Button";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+import Container from "@/shared/components/layout/Container";
+import { Button } from "@/shared/components/ui/Button";
+import ScrollReveal from "@/shared/components/ui/ScrollReveal";
 
 export default function ContactPage() {
     return (
@@ -40,5 +40,6 @@ export default function ContactPage() {
         </section>
     );
 }
+
 
 
