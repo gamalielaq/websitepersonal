@@ -104,10 +104,10 @@ export default function AboutIntroSection() {
                             <p className="mt-4 mb-3 text-[2.5rem] uppercase tracking-[0.1em] text-text">MAS QUE UN DESARROLLADOR: <span className="text-[#00e5ff]">TU SOCIO TECNICO</span></p>
                             <div className="mt-3 max-w-2xl space-y-6 text-base leading-8 text-[#bac9cc]">
                                 <p>
-                                    Mi camino no comenzo frente a una pantalla, sino con la curiosidad de entender como se sostienen las estructuras complejas. Hoy, aplico esa misma mentalidad de ingenieria civil al desarrollo de software: cada linea de codigo es un ladrillo, cada API es un refuerzo estructural.
+                                   Mi camino no comenzó solo escribiendo código, sino entendiendo cómo estructurar aplicaciones complejas de forma clara y mantenible. Hoy aplico ese enfoque en el desarrollo con Angular, construyendo interfaces bajo principios de arquitectura modular y escalable.
                                 </p>
                                 <p>
-                                    Como desarrollador freelance y fundador, mi objetivo no es simplemente entregar codigo, sino disenar sistemas resilientes que crezcan con tu negocio. No creo en soluciones rapidas que generan deuda tecnica; creo en precision quirurgica y escalabilidad desde el dia cero.
+                                    Mi trabajo no se limita a implementar funcionalidades: analizo, estructuro y optimizo soluciones para evitar deuda técnica y asegurar que el sistema pueda evolucionar sin problemas. Priorizo claridad, consistencia y decisiones técnicas bien fundamentadas desde el inicio
                                 </p>
                             </div>
                         </div>
