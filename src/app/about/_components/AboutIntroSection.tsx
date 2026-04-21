@@ -195,7 +195,7 @@ export default function AboutIntroSection() {
                                 </div>
                                 <div>
                                     <div className="text-[10px] uppercase tracking-widest text-text/60">Email</div>
-                                    <div className="text-lg font-medium text-text">contacto@architect.io</div>
+                                    <div className="text-lg font-medium text-text">gamaliel.aq96@gmail.com</div>
                                 </div>
                             </div>
 
