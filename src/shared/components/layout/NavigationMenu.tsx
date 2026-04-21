@@ -71,7 +71,7 @@ export default function NavigationMenu() {
                             rel="noreferrer"
                             className="rounded-lg bg-[#00e5ff] px-5 py-2 text-xs font-bold text-black transition-all duration-200 hover:brightness-110 active:scale-95"
                         >
-                            GET_CONSULTANCY
+                            Obtener Consultoría
                         </Link>
                     </nav>
 

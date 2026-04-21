@@ -15,7 +15,7 @@ export default function Footer() {
             <Container className="py-12 sm:py-14">
                 <div className="grid gap-10 md:grid-cols-4">
                     <div className="md:col-span-1">
-                        <p className="text-lg font-black tracking-tight text-text">LUMINOUS_ARCHITECT</p>
+                        <p className="text-lg font-black tracking-tight text-text">Gamaliel Abanto</p>
                         <p className="mt-4 text-sm leading-7 text-text/62">
                             Ingenieria de software premium para equipos que necesitan rendimiento, claridad y escalabilidad.
                         </p>
