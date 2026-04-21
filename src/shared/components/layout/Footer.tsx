@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Github, Linkedin, Mail, MapPin, type LucideIcon } from "lucide-react";
 import Container from "./Container";
-import { socialLinks, type SocialIconKey } from "@/content/social-links";
+import { LINKEDIN_URL, socialLinks, type SocialIconKey } from "@/content/social-links";
 
 const socialIconMap: Record<SocialIconKey, LucideIcon> = {
     linkedin: Linkedin,
@@ -43,7 +43,7 @@ export default function Footer() {
                         <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Compañia</p>
                         <ul className="mt-4 space-y-3 text-sm text-text/66">
                             <li><Link href="/about" className="transition-colors hover:text-text">Sobre mi</Link></li>
-                            <li><Link href="/contact" className="transition-colors hover:text-text">Contacto</Link></li>
+                            <li><Link href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="transition-colors hover:text-text">Contacto</Link></li>
                             {/* <li><span className="text-text/40">Careers</span></li> */}
                         </ul>
                     </div>
@@ -82,4 +82,3 @@ export default function Footer() {
         </footer>
     );
 }
-

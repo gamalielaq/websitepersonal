@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Inter:wght@400;500;600&amp;family=Space_Grotesk:wght@400;500;700&amp;display=swap"
+          rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+          rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-primary-fixed": "#003f43",
+                            "surface-variant": "#262626",
+                            "inverse-surface": "#fcf8f8",
+                            "on-secondary-container": "#d2d0cf",
+                            "surface-container-highest": "#262626",
+                            "on-background": "#ffffff",
+                            "on-tertiary-fixed": "#001930",
+                            "inverse-primary": "#006a71",
+                            "on-primary-fixed-variant": "#005e64",
+                            "secondary": "#e4e2e1",
+                            "on-secondary": "#525151",
+                            "on-error": "#490006",
+                            "error": "#ff716c",
+                            "on-error-container": "#ffa8a3",
+                            "on-surface": "#ffffff",
+                            "surface-container-lowest": "#000000",
+                            "error-dim": "#d7383b",
+                            "primary": "#8ff5ff",
+                            "surface-container-high": "#201f1f",
+                            "on-tertiary-container": "#00213e",
+                            "tertiary-dim": "#4aa2f9",
+                            "primary-fixed-dim": "#00deec",
+                            "outline": "#777575",
+                            "primary-container": "#00eefc",
+                            "surface-container-low": "#131313",
+                            "surface-bright": "#2c2c2c",
+                            "tertiary-fixed-dim": "#51a7fe",
+                            "primary-dim": "#00deec",
+                            "tertiary-container": "#4aa2f9",
+                            "inverse-on-surface": "#565554",
+                            "surface-container": "#1a1919",
+                            "surface": "#0e0e0e",
+                            "surface-tint": "#8ff5ff",
+                            "background": "#0e0e0e",
+                            "surface-dim": "#0e0e0e",
+                            "tertiary": "#65afff",
+                            "on-primary-container": "#005359",
+                            "on-secondary-fixed": "#3f3f3f",
+                            "on-tertiary-fixed-variant": "#003b68",
+                            "secondary-dim": "#d6d4d3",
+                            "error-container": "#9f0519",
+                            "on-tertiary": "#002e52",
+                            "on-primary": "#005d63",
+                            "outline-variant": "#494847",
+                            "secondary-fixed": "#e4e2e1",
+                            "secondary-container": "#474746",
+                            "tertiary-fixed": "#72b5ff",
+                            "on-surface-variant": "#adaaaa",
+                            "secondary-fixed-dim": "#d6d4d3",
+                            "on-secondary-fixed-variant": "#5c5b5b",
+                            "primary-fixed": "#00eefc"
+                        },
+                        fontFamily: {
+                            "headline": ["Manrope"],
+                            "body": ["Inter"],
+                            "label": ["Space Grotesk"]
+                        },
+                        borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                    },
+                },
+            }
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            }
+
+            .glass-panel {
+                background: rgba(19, 19, 19, 0.4);
+                backdrop-filter: blur(20px);
+            }
+        </style>
+        <style>
+            body {
+                min-height: max(884px, 100dvh);
+            }
+        </style>
+    </head>
+
+    <body class="bg-background text-on-surface font-body selection:bg-primary/30 selection:text-primary">
+        <!-- TopAppBar -->
+        <nav
+          class="fixed top-0 w-full z-50 bg-[#0e0e0e]/40 backdrop-blur-xl border-b border-[#494847]/15 shadow-[0_20px_40px_rgba(143,245,255,0.06)]">
+            <div class="flex justify-between items-center h-16 px-6 w-full max-w-screen-xl mx-auto">
+                <div class="flex items-center gap-4">
+                    <span
+                      class="material-symbols-outlined text-[#8ff5ff] cursor-pointer hover:scale-110 transition-transform"
+                      data-icon="menu">menu</span>
+                    <span class="text-xl font-black tracking-tighter text-[#8ff5ff] font-headline">ARCHITECT.IO</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a class="text-[#adaaaa] hover:text-[#8ff5ff] transition-colors duration-300 text-[10px] uppercase tracking-[0.1em] font-label"
+                      href="#">Architecture</a>
+                    <a class="text-[#adaaaa] hover:text-[#8ff5ff] transition-colors duration-300 text-[10px] uppercase tracking-[0.1em] font-label"
+                      href="#">Projects</a>
+                    <a class="text-[#00eefc] font-bold text-[10px] uppercase tracking-[0.1em] font-label"
+                      href="#">Contact</a>
+                </div>
+                <button
+                  class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-5 py-2 rounded-md font-bold text-xs tracking-wider uppercase active:scale-95 transition-all">
+                    LET'S BUILD
+                </button>
+            </div>
+        </nav>
+        <main class="pt-32 pb-20 px-6 max-w-screen-xl mx-auto space-y-32">
+            <!-- About Hero Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="space-y-2">
+                        <span class="text-primary font-label text-sm tracking-[0.2em] uppercase">Socio
+                            Tecnológico</span>
+                        <h1 class="text-5xl md:text-7xl font-extrabold font-headline leading-none tracking-tighter">
+                            MÁS QUE UN DESARROLLADOR: <span
+                              class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-tertiary">TU SOCIO
+                                TÉCNICO</span>
+                        </h1>
+                    </div>
+                    <div class="prose prose-invert max-w-none">
+                        <p class="text-lg text-on-surface-variant leading-relaxed font-body">
+                            Con más de una década traduciendo visiones complejas en arquitecturas robustas, mi enfoque
+                            trasciende el simple código. Me especializo en construir soluciones que escalan, priorizando
+                            la precisión técnica y la excelencia operativa. Mi trayectoria como arquitecto de software
+                            me ha preparado para mi siguiente fase: fundar una compañía de desarrollo que redefine los
+                            estándares de calidad en la industria cloud y móvil.
+                        </p>
+                    </div>
+                    <!-- Metrics Grid -->
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 pt-6">
+                        <div class="bg-surface-container p-6 border-l-2 border-primary">
+                            <div class="text-3xl font-black font-headline text-primary">10+</div>
+                            <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Años
+                                de Exp.</div>
+                        </div>
+                        <div class="bg-surface-container p-6 border-l-2 border-tertiary">
+                            <div class="text-3xl font-black font-headline text-tertiary">50+</div>
+                            <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">Apps
+                                Lanzadas</div>
+                        </div>
+                        <div class="bg-surface-container p-6 border-l-2 border-primary-container hidden md:block">
+                            <div class="text-3xl font-black font-headline text-primary-container">100%</div>
+                            <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">
+                                Arquitectura Cloud</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 relative">
+                    <div
+                      class="aspect-[4/5] bg-surface-container overflow-hidden rounded-xl shadow-[0_40px_80px_rgba(143,245,255,0.06)] relative group">
+                        <img alt="Senior Software Architect Professional Portrait"
+                          class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                          data-alt="Professional portrait of a middle-aged male software architect in a dark studio, cinematic lighting, sharp focus, technical background with subtle blue glow"
+                          src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2BQMErU8ykaZhZSIOV7tpHDn7G_JsS4zRc3x9hfdOBBuIPbvRvLSj__VANxT9SPBWtDlWSQufHb2yKuN58CSw2StiDhLlfNddPWUyibvv0-VQsnc-i--NGn-ENZdNGyhvOGVl5dOkePxBVgPUXZ29Aj5PubdYjep4IGlgoSUQP3QX0_tT6DxU38ulK8GOXODLQh-6Hebrk6Rtfgq5KyhCrPEckfkSz2xP3HAih214iuIPDemlKFlb_wyKbxrSjMVuxk3fr1hAVSY" />
+                        <div
+                          class="absolute inset-0 border-[16px] border-surface-container-lowest/20 pointer-events-none">
+                        </div>
+                        <!-- Decorative Element -->
+                        <div class="absolute -bottom-4 -left-4 w-24 h-24 border-b-2 border-l-2 border-primary"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Key Highlights / Timeline (Bento Style) -->
+            <section class="space-y-12">
+                <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                    <div class="max-w-xl">
+                        <span class="text-primary font-label text-xs tracking-widest uppercase">Evolución
+                            Profesional</span>
+                        <h2 class="text-3xl font-bold font-headline mt-2">HITOS DE INGENIERÍA</h2>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                    <div
+                      class="md:col-span-2 bg-surface-container-low p-8 rounded-xl border border-outline-variant/15 hover:bg-surface-container transition-colors group">
+                        <span class="material-symbols-outlined text-primary mb-4 block"
+                          data-icon="architecture">architecture</span>
+                        <h3 class="text-xl font-bold font-headline mb-2">Clean Architecture Guru</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Implementación de patrones Domain
+                            Driven Design para sistemas distribuidos de alta disponibilidad.</p>
+                    </div>
+                    <div
+                      class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/15 hover:bg-surface-container transition-colors group">
+                        <span class="material-symbols-outlined text-tertiary mb-4 block"
+                          data-icon="cloud_done">cloud_done</span>
+                        <h3 class="text-xl font-bold font-headline mb-2">Cloud Pioneer</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Migraciones masivas a entornos
+                            serverless en GCP y AWS.</p>
+                    </div>
+                    <div
+                      class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/15 hover:bg-surface-container transition-colors group">
+                        <span class="material-symbols-outlined text-primary-container mb-4 block"
+                          data-icon="verified_user">verified_user</span>
+                        <h3 class="text-xl font-bold font-headline mb-2">FinTech Security</h3>
+                        <p class="text-sm text-on-surface-variant leading-relaxed">Liderazgo técnico en auditorías de
+                            seguridad bancaria.</p>
+                    </div>
+                    <div
+                      class="bg-surface-container-high p-8 rounded-xl border border-primary/20 md:col-span-4 relative overflow-hidden group">
+                        <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+                            <div class="flex-1 space-y-4">
+                                <h3 class="text-2xl font-black font-headline uppercase tracking-tighter">EL FUTURO:
+                                    FUNDACIÓN DE ESTUDIO TÉCNICO</h3>
+                                <p class="text-on-surface-variant">Estamos escalando de consultoría individual a una
+                                    firma de ingeniería boutique enfocada en la robustez algorítmica y UX impecable.</p>
+                            </div>
+                            <div class="flex-shrink-0">
+                                <button
+                                  class="bg-surface-container-lowest border border-primary/50 text-primary px-8 py-3 rounded-md font-bold font-label text-xs tracking-[0.2em] hover:bg-primary hover:text-on-primary transition-all uppercase">
+                                    VER ROADMAP
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Background Decoration -->
+                        <div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 blur-[100px] -mr-32 -mt-32"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- Contact Section -->
+            <section class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="space-y-12">
+                    <div class="space-y-4">
+                        <span class="text-primary font-label text-xs tracking-widest uppercase">¿Listo para
+                            escalar?</span>
+                        <h2 class="text-4xl font-black font-headline leading-tight">HABLEMOS DE TU PRÓXIMA SOLUCIÓN</h2>
+                        <p class="text-on-surface-variant text-lg max-w-md">Transformo requerimientos de negocio en
+                            activos tecnológicos de alto rendimiento.</p>
+                    </div>
+                    <div class="space-y-8">
+                        <div class="flex items-start gap-6 group">
+                            <div
+                              class="w-12 h-12 rounded bg-surface-container flex items-center justify-center border border-outline-variant/15 group-hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary"
+                                  data-icon="alternate_email">alternate_email</span>
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">
+                                    Email</div>
+                                <div class="text-lg font-medium">gamaliel.aq96@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-6 group">
+                            <div
+                              class="w-12 h-12 rounded bg-surface-container flex items-center justify-center border border-outline-variant/15 group-hover:border-primary transition-colors">
+                                <span class="material-symbols-outlined text-primary" data-icon="hub">hub</span>
+                            </div>
+                            <div>
+                                <div class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant">
+                                    Redes Profesionales</div>
+                                <div class="flex gap-4 mt-2">
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-xs tracking-widest"
+                                      href="#">GITHUB</a>
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-xs tracking-widest"
+                                      href="#">LINKEDIN</a>
+                                    <a class="text-on-surface-variant hover:text-primary transition-colors font-label text-xs tracking-widest"
+                                      href="#">STACKOVERFLOW</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-surface-container p-10 rounded-xl relative">
+                    <form class="space-y-6">
+                        <div class="space-y-1">
+                            <label
+                              class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant ml-1">Nombre
+                                Completo</label>
+                            <input
+                              class="w-full bg-surface-container-lowest border border-outline-variant/15 focus:border-primary focus:ring-1 focus:ring-primary/20 text-on-surface px-4 py-3 rounded outline-none transition-all placeholder:text-outline-variant"
+                              placeholder="John Doe" type="text" />
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                              class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant ml-1">Email
+                                Corporativo</label>
+                            <input
+                              class="w-full bg-surface-container-lowest border border-outline-variant/15 focus:border-primary focus:ring-1 focus:ring-primary/20 text-on-surface px-4 py-3 rounded outline-none transition-all placeholder:text-outline-variant"
+                              placeholder="john@company.com" type="email" />
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                              class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant ml-1">Tipo
+                                de Proyecto</label>
+                            <select
+                              class="w-full bg-surface-container-lowest border border-outline-variant/15 focus:border-primary focus:ring-1 focus:ring-primary/20 text-on-surface px-4 py-3 rounded outline-none transition-all appearance-none">
+                                <option>Desarrollo Cloud &amp; Backend</option>
+                                <option>Mobile App (Flutter/React Native)</option>
+                                <option>Auditoría de Arquitectura</option>
+                                <option>Consultoría CTO-as-a-Service</option>
+                            </select>
+                        </div>
+                        <div class="space-y-1">
+                            <label
+                              class="text-[10px] font-label uppercase tracking-widest text-on-surface-variant ml-1">Tu
+                                Mensaje</label>
+                            <textarea
+                              class="w-full bg-surface-container-lowest border border-outline-variant/15 focus:border-primary focus:ring-1 focus:ring-primary/20 text-on-surface px-4 py-3 rounded outline-none transition-all placeholder:text-outline-variant resize-none"
+                              placeholder="Describe brevemente el desafío técnico..." rows="4"></textarea>
+                        </div>
+                        <button
+                          class="w-full bg-gradient-to-r from-primary to-primary-container text-on-primary-container font-black font-headline py-4 rounded shadow-lg shadow-primary/10 hover:shadow-primary/20 active:scale-95 transition-all uppercase tracking-tighter">
+                            INICIAR CONVERSIÓN
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-12 px-6 border-t border-[#494847]/15 bg-[#0e0e0e]">
+            <div class="flex flex-col items-center space-y-8 w-full max-w-screen-xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-12">
+                    <a class="text-[#adaaaa] hover:text-[#00eefc] underline decoration-[#00eefc] decoration-2 underline-offset-4 transition-all duration-300 text-xs font-bold font-body tracking-wider"
+                      href="#">GITHUB</a>
+                    <a class="text-[#adaaaa] hover:text-[#00eefc] underline decoration-[#00eefc] decoration-2 underline-offset-4 transition-all duration-300 text-xs font-bold font-body tracking-wider"
+                      href="#">LINKEDIN</a>
+                    <a class="text-[#adaaaa] hover:text-[#00eefc] underline decoration-[#00eefc] decoration-2 underline-offset-4 transition-all duration-300 text-xs font-bold font-body tracking-wider"
+                      href="#">STACKOVERFLOW</a>
+                </div>
+                <div class="text-[10px] font-label tracking-widest uppercase text-[#adaaaa] text-center">
+                    © 2024 ARCHITECTURAL CORE. ENGINEERED FOR PRECISION.
+                </div>
+            </div>
+        </footer>
+        <!-- Mobile Navigation Overlay (Simulated) -->
+        <div
+          class="fixed inset-y-0 left-0 z-[60] flex flex-col h-full w-80 bg-[#131313] shadow-[40px_0_80px_rgba(143,245,255,0.06)] transform -translate-x-full transition-transform duration-500 ease-in-out">
+            <div class="p-8 flex items-center gap-4 bg-[#1a1919]">
+                <img alt="Senior Fullstack Architect Portrait" class="w-12 h-12 rounded-full object-cover"
+                  data-alt="Small circular professional headshot of a developer with glasses and neutral background"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDho9d-gmkZZ0trucsnbIO2tceYOQmC46LN0AygCB_Rav1qsOESgXT7IQV_lxZGHvFzeLyQudqg6TqbmR99JRq05wFEiWHk53YGrJNy8v9XtTdCqn4z10rF2LI4SR8QrNvN1jjDEK8h9LDF92cAjIv6I_dk64hQhNLgNZu744AdKCqbxNrr7TPk33IEzbkjERFwBLvM6dnT2WwSVwuGbq2shOdO2jlg0yZiucihjZdF76VpuQQJt0WxXemxE0hy5qiQRLeMzDYqItw" />
+                <div>
+                    <div class="text-lg font-bold font-headline text-[#8ff5ff]">Lead Engineer</div>
+                    <div class="text-[10px] text-on-surface-variant font-label uppercase">v4.0.0-stable</div>
+                </div>
+            </div>
+            <div class="flex-1 px-4 py-8 space-y-2">
+                <div
+                  class="flex items-center gap-4 px-6 py-4 rounded-lg text-[#adaaaa] hover:bg-[#1a1919] hover:pl-8 transition-all duration-300 cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="architecture">architecture</span>
+                    <span class="text-sm font-medium font-body">Architecture</span>
+                </div>
+                <div
+                  class="flex items-center gap-4 px-6 py-4 rounded-lg text-[#adaaaa] hover:bg-[#1a1919] hover:pl-8 transition-all duration-300 cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="account_tree">account_tree</span>
+                    <span class="text-sm font-medium font-body">Projects</span>
+                </div>
+                <div
+                  class="flex items-center gap-4 px-6 py-4 rounded-lg bg-gradient-to-r from-[#8ff5ff]/10 to-transparent text-[#8ff5ff] border-l-2 border-[#8ff5ff] transition-all duration-300 cursor-pointer">
+                    <span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+                    <span class="text-sm font-medium font-body">Contact</span>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>

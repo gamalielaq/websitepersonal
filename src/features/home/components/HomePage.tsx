@@ -87,10 +87,10 @@ export default function HomePage() {
                                 <div className="absolute bottom-6 left-6 right-6">
                                     <div className="rounded-md border-l-2 border-accent bg-surface/80 p-4 backdrop-blur">
                                         <p className="mb-1 font-mono text-[10px] uppercase tracking-widest text-accent">
-                                            Ingeniero Principal
+                                            Gamaliel Abanto
                                         </p>
                                         <p className="text-sm font-bold text-text">
-                                            Especialista en Sistemas Distribuidos
+                                            Especialista en Arquitectura Angular Enterprise
                                         </p>
                                     </div>
                                 </div>
@@ -208,29 +208,6 @@ export default function HomePage() {
                                 </p>
                             </div>
                             <AngularGradientIcon className="h-12 w-12" />
-                        </div>
-                    </div>
-                </Container>
-            </section>
-
-            <section id="tech-orbit" className="border-y border-border/20 py-20">
-                <Container>
-                    <div className="grid grid-cols-2 gap-12 text-center md:grid-cols-4 md:text-left">
-                        <div>
-                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">45+</p>
-                            <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Proyectos Exitosos</p>
-                        </div>
-                        <div>
-                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">7</p>
-                            <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Años de Experiencia</p>
-                        </div>
-                        <div>
-                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">12</p>
-                            <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Empresas Fortune 500</p>
-                        </div>
-                        <div>
-                            <p className="font-mono text-3xl font-bold tracking-tighter text-accent">100%</p>
-                            <p className="font-mono text-[10px] uppercase tracking-widest text-text/60">Código Testeable</p>
                         </div>
                     </div>
                 </Container>

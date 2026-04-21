@@ -13,6 +13,7 @@ import {
     Zap,
 } from "lucide-react";
 import Container from "@/shared/components/layout/Container";
+import { LINKEDIN_URL } from "@/content/social-links";
 
 const values = [
     {
@@ -271,7 +272,9 @@ export default function AboutIntroSection() {
 
                     <div className="flex flex-col gap-4 md:flex-row">
                         <Link
-                            href="/#contacto"
+                            href={LINKEDIN_URL}
+                            target="_blank"
+                            rel="noreferrer"
                             className="inline-flex items-center gap-2 rounded-md bg-accent px-8 py-4 text-xs font-bold uppercase tracking-[0.16em] text-black transition hover:brightness-110"
                         >
                             <Mail className="h-4 w-4" />

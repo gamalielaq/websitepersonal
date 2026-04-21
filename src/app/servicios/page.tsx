@@ -12,6 +12,7 @@ import {
 import Container from "@/shared/components/layout/Container";
 import TechnologyChip from "@/features/services/components/TechnologyChip";
 import { services, type ServiceIconKey } from "@/content/services";
+import { LINKEDIN_URL } from "@/content/social-links";
 
 const serviceIconMap: Record<ServiceIconKey, LucideIcon> = {
     applications: AppWindow,
@@ -197,7 +198,9 @@ export default function ServicesPage() {
                         </p>
                         <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
                             <Link
-                                href="/#contacto"
+                                href={LINKEDIN_URL}
+                                target="_blank"
+                                rel="noreferrer"
                                 className="inline-flex items-center rounded-full bg-accent/50 px-6 py-3 text-sm font-semibold text-black transition hover:brightness-110"
                             >
                                 Solicitar propuesta tecnica
@@ -215,4 +218,3 @@ export default function ServicesPage() {
         </main>
     );
 }
-

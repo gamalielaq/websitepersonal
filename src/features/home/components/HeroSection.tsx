@@ -6,6 +6,7 @@ import { Blocks, Box, Database, ServerCog } from "lucide-react";
 import Container from "@/shared/components/layout/Container";
 import FloatingTechIcons from "@/shared/components/layout/FloatingTechIcons";
 import { Button } from "@/shared/components/ui/Button";
+import { LINKEDIN_URL } from "@/content/social-links";
 
 const motionEase = [0.22, 1, 0.36, 1] as const;
 
@@ -129,7 +130,7 @@ export default function HeroSection() {
                             <Button href="/#services" variant="outline">
                                 Ver servicios
                             </Button>
-                            <Button href="/contact" variant="default">
+                            <Button href={LINKEDIN_URL} target="_blank" rel="noreferrer" variant="default">
                                 Contáctame
                             </Button>
                         </motion.div>
@@ -169,7 +170,7 @@ export default function HeroSection() {
                                 <Button href="/#services" variant="outline">
                                     Ver servicios
                                 </Button>
-                                <Button href="/contact" variant="default">
+                                <Button href={LINKEDIN_URL} target="_blank" rel="noreferrer" variant="default">
                                     Contactame
                                 </Button>
                             </motion.div>

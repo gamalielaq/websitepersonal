@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Menu, Terminal } from "lucide-react";
 import { navigationItems } from "@/content/navigation";
+import { LINKEDIN_URL } from "@/content/social-links";
 import Container from "./Container";
 import { Button } from "@/shared/components/ui/Button";
 import {
@@ -43,6 +44,7 @@ export default function NavigationMenu() {
                     <nav className="hidden items-center gap-10 uppercase tracking-tight text-[#e5e2e1] md:flex">
                         {menuItems.map((item) => {
                             const isHashLink = item.href.startsWith("/#");
+                            const isExternalLink = item.href.startsWith("http");
                             const isActive = isHashLink
                                 ? activeHash === item.href.slice(1)
                                 : pathname === item.href;
@@ -51,6 +53,8 @@ export default function NavigationMenu() {
                                 <Link
                                     key={item.href}
                                     href={item.href}
+                                    target={isExternalLink ? "_blank" : undefined}
+                                    rel={isExternalLink ? "noreferrer" : undefined}
                                     className={`pb-1 text-sm transition-colors ${
                                         isActive
                                             ? "border-b-2 border-[#00e5ff] text-[#00e5ff]"
@@ -62,7 +66,9 @@ export default function NavigationMenu() {
                             );
                         })}
                         <Link
-                            href="/#contacto"
+                            href={LINKEDIN_URL}
+                            target="_blank"
+                            rel="noreferrer"
                             className="rounded-lg bg-[#00e5ff] px-5 py-2 text-xs font-bold text-black transition-all duration-200 hover:brightness-110 active:scale-95"
                         >
                             GET_CONSULTANCY
@@ -91,6 +97,7 @@ export default function NavigationMenu() {
                             <nav className="mt-2 flex flex-col gap-1.5">
                                 {menuItems.map((item) => {
                                     const isHashLink = item.href.startsWith("/#");
+                                    const isExternalLink = item.href.startsWith("http");
                                     const isActive = isHashLink
                                         ? activeHash === item.href.slice(1)
                                         : pathname === item.href;
@@ -99,6 +106,8 @@ export default function NavigationMenu() {
                                         <DialogClose asChild key={`mobile-${item.href}`}>
                                             <Link
                                                 href={item.href}
+                                                target={isExternalLink ? "_blank" : undefined}
+                                                rel={isExternalLink ? "noreferrer" : undefined}
                                                 className={`border-l-[3px] border-y border-r px-4 py-2.5 text-sm font-medium transition duration-200 ${
                                                     isActive
                                                         ? "border-l-[#00e5ff] border-y-white/12 border-r-white/12 bg-white/[0.04] text-[#00e5ff]"
